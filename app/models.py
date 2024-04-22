@@ -14,7 +14,7 @@ class Signup(models.Model):
 
 
 class UserProfile(models.Model):
-    firstName = models.CharField(max_length=120)
+    firstName = models.CharField(max_length=130)
     last_name = models.CharField(max_length=120)
     contact = models.CharField(max_length=20)
     address = models.CharField(max_length=255)
