@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback Page</title>
+<style>
+    /* Nav Bar CSS Begins Here */
+.navbar {
+    position: fixed; /* Set the navbar to be fixed */
+    top: 0; /* Position it at the top of the viewport */
+    width: 100%; /* Make it span the full width of the viewport */
+    z-index: 1000; /* Ensure it's above other elements */
+
+    text-align: center;
+}
+
+nav {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+/* Nav Bar CSS Ends Here */
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    .feedback_container {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Set height to fill the viewport vertically */
+        }
+
+        .feedback_history {
+            width: 80%; /* Set width of the feedback history section */
+            max-width: 600px; /* Set maximum width */
+            padding: 20px;
+            border: 1px solid #ccc; /* Add border for the box */
+            border-radius: 10px; /* Add border radius */
+            background-color: #f9f9f9; /* Background color */
+        }
+
+        .feedback_history h1 {
+            text-align: center; /* Center the heading */
+        }
+
+        .feedback_history ul {
+            list-style-type: none; /* Remove default list style */
+            padding: 0;
+        }
+
+        .feedback_history li {
+            margin-bottom: 20px; /* Add some spacing between feedback items */
+        }
+
+        .feedback_history li strong {
+            display: inline-block;
+            width: 100px; /* Set width for labels */
+            font-weight: bold;
+        }
+</style>
+</head>
+<body>
+    <br>
+  <!--Nav Bar Code Begins From Here-->    
+  <div class="navbar">
+    <nav>
+        <ul>
+            <li><a href="/home/#home" onclick="scrollToHome()">Home</a></li>
+            <li><a href="/home/#Destination" onclick="scrollToDestination()">Destination</a></li>
+            <li><a href="/home/#CostCalculation" onclick="scrollToCostCalculation()">Cost Calculation</a></li>
+            <li><a href="/map">Map</a></li>
+            <li><a href="/feedback">Feedback</a></li>
+            <li><a href="/profile"><lord-icon
+              src="https://cdn.lordicon.com/kthelypq.json"
+              trigger="hover"
+              style="width:30px;height:30px;margin-left:10px">
+          </lord-icon></a></li>
+        </ul>
+    </nav>
+</div>
+<!--Nav Bar Code Ends Here-->
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+    <h2>Feedback Form</h2>
+    <form id="feedbackForm" method="post">
+        {%csrf_token%}
+       
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" value="{{user.first_name}}" >
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{user.email}}">
+        
+        <label for="subject"> Subject</label>
+        <input type="text" id="subject" name="subject" required>
+        
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="5" required></textarea>
+        
+        <button type="submit" >Submit Feedback</button>
+    </form>
+</div>
+<!-- feedback.html -->
+
+<div class="feedback_container">
+    <div class="feedback_history">
+        <h1>All Feedbacks</h1>
+        {% if allfeedbacks %}
+            <ul>
+                {% for fb in allfeedbacks %}
+                    <li>
+                        <strong>Name:</strong> {{ fb.name }} <br>
+                        <strong>Email:</strong> {{ fb.email }} <br>
+                        <strong>Subject:</strong> {{ fb.subject }} <br>
+                        <strong>Feedback:</strong> {{ fb.feedback }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No feedback available.</p>
+        {% endif %}
+    </div>
+</div>
+
+<!-- <div>
+    <h1>All Feedbacks</h1>
+    {% if allfeedbacks %}
+        <ul>
+            {% for fb in allfeedbacks %}
+                <li>{{ fb.name }} - {{ fb.message }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No feedback available.</p>
+    {% endif %}
+</div> -->
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
+</body>
+</html>

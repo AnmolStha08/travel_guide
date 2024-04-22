@@ -1,0 +1,27 @@
+/* Gallery */
+#Gallerypage{
+  margin: auto;
+}
+.gallery { padding-block: var(--section-padding); }
+
+.gallery-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-15);
+  overflow: hidden;
+}
+
+.gallery-item:nth-child(3) { grid-area: 1 / 2 / 3 / 3; }
+
+.gallery-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cost Calculation</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/test.css">
+</head>
+<body>
+<!-- 
+        - #GALLERY
+      -->
+    <div id="Gallerypage">
+      <section class="gallery" id="gallery">
+        <div class="container">
+
+          <p class="section-subtitle">Photo Gallery</p>
+
+          <h2 class="h2 section-title">Photo's From Travellers</h2>
+
+          <p class="section-text">
+            Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque laudantium.
+            Sit ornare
+            mollitia tenetur, aptent.
+          </p>
+
+          <ul class="gallery-list">
+
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="./assets/images/gallery-1.jpg" alt="Gallery image">
+              </figure>
+            </li>
+
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="./assets/images/gallery-2.jpg" alt="Gallery image">
+              </figure>
+            </li>
+
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="./assets/images/gallery-3.jpg" alt="Gallery image">
+              </figure>
+            </li>
+
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="./assets/images/gallery-4.jpg" alt="Gallery image">
+              </figure>
+            </li>
+
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="./assets/images/gallery-5.jpg" alt="Gallery image">
+              </figure>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </div>
+	<script src="../static/js/test.js"></script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Profile</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/Profile.css">
+</head>
+<body>
+    <!--Nav Bar Code Begins From Here-->    
+    <div class="navbar">
+      <nav>
+          <ul>
+              <li><a href="#Home" onclick="scrollToHome()">Home</a></li>
+              <li><a href="#Destinationhomepage.html" onclick="scrollToDestination()">Destination</a></li>
+              <li><a href="#CostCalculation" onclick="scrollToCostCalculation()">Cost Calculation</a></li>
+              <li><a href="map.html">Map</a></li>
+              <li><a href="profile.html"><lord-icon
+                src="https://cdn.lordicon.com/kthelypq.json"
+                trigger="hover"
+                style="width:30px;height:30px;margin-left:10px">
+            </lord-icon></a></li>
+          </ul>
+      </nav>
+  </div>
+<!--Nav Bar Code Ends Here-->
+
+  <form id="uploadForm" action="upload.php" method="post" enctype="multipart/form-data">
+    <div class="profile-header" id="backgroundImageContainer" style="background-image: url('path_to_background_image.jpg'); height: 500px;">
+        <label for="backgroundInput" id="backgroundInputLabel" class="edit-label">Edit</label>
+        <input type="file" id="backgroundInput" name="backgroundImage" accept="image/*" onchange="previewBackground(this);">
+    </div>
+
+    <div class="profile-header" id="profileImageContainer" style="margin-top: -100px;">
+        <img id="uploadedProfileImage" src="" alt="Profile Image">
+        <label for="profileInput" id="profileInputLabel" class="edit-label">Edit</label>
+        <input type="file" id="profileInput" name="profileImage" accept="image/*" onchange="previewProfile(this);">
+    </div>
+
+    <div class="user-details">
+        <h2>User Details</h2>
+        <div id="detailsContainer">
+            <span id="nameField">John Doe</span><br>
+            <span id="addressField">123 Main Street</span><br>
+            <span id="emailField">john@example.com</span><br>
+            <span id="contactField">123-456-7890</span><br>
+        </div>
+        <button id="editButton" onclick="editDetails()">Edit</button>
+    </div>
+</form>
+
+  <script src="../static/js/Profile.js"></script>
+</body>
+</html> -->

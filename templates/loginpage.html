@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Guide Login</title>
+    <link rel="stylesheet" href="../static/css/loginpage.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to your travel guide</h1>
+        <form action="#" id="login-form" method="post">
+            {%csrf_token%}
+            <label for="username">Enter your username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Enter password</label>
+            <input type="password" id="password" name="password" required>
+            <label for="show-password" class="show-password-label">Show password</label>
+            <input type="checkbox" id="show-password" class="show-password-checkbox">
+
+            <a href="/home"><button type="submit">Login</button></a>
+        </form>
+        <a href="#" id="forgot-password">Forgot password?</a>
+        <a href="/signup" id="create-account">Create new account</a>
+    </div>
+    <script src="loginpage.js"></script>
+</body>
+</html>

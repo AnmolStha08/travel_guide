@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/css/homepage.css">
+    
+ 
+    
+</head>
+<body id="Home">
+   <!--Nav Bar Code Begins From Here-->    
+   <div class="navbar">
+    <nav>
+        <ul>
+            <li><a href="/home/#home" onclick="scrollToHome()">Home</a></li>
+            <li><a href="/home/#Destination" onclick="scrollToDestination()">Destination</a></li>
+            <li><a href="/home/#CostCalculation" onclick="scrollToCostCalculation()">Cost Calculation</a></li>
+            <li><a href="/map">Map</a></li>
+            <li><a href="/feedback">Feedback</a></li>
+            <li><a href="/profile"><lord-icon
+              src="https://cdn.lordicon.com/kthelypq.json"
+              trigger="hover"
+              style="width:30px;height:30px;margin-left:10px">
+          </lord-icon></a></li>
+        </ul>
+    </nav>
+</div>
+<!--Nav Bar Code Ends Here-->
+
+  <!-- Changing Image Code Begins Here -->        
+    <div class="image-container" onclick="changeImage()">
+        <img id="rotating-image" src="../static/images/imgs1.jpg" alt="Rotating image">
+    </div>
+
+    <div class="Slogon">
+      <h1>Discover Your Next Adventure </h1>
+      <div class="search-container">
+        <input type="text" placeholder="Search" style="height: 20px;">
+        
+    </div>
+    </div> 
+  <!-- Changing Image Code Begins Here -->
+
+  <!--Destination Code Starts Here-->
+    
+    <div id="Destination">
+      <div class="space">
+        <h1>space</h1>
+      </div>
+      <h1 class="choice">Where would you like to go?</h1>
+        <div class="multi">
+            <a href=""></a><div class="destination-card">
+                <img src="../static/images/imgs4.jpg" alt="Destination Image">
+                <div class="destination-info">
+                    <h3>Mustang </h3>
+                    <p>Mustang, a district in the northwestern part of Nepal, 
+                      is a captivating destination renowned for its unique blend of natural beauty,
+                       cultural richness, and historical significance. 
+                       Situated in the rain shadow of the Himalayas, Mustang boasts a 
+                       distinct landscape characterized by barren hills, deep gorges, 
+                       and rugged terrain, offering a stark contrast to the lush greenery
+                        found in other regions of Nepal.</p>
+                    
+                </div>
+            </div>
+
+            <div class="destination-card">
+              <img src="../static/images/pokhara.jpg" alt="Destination Image">
+              <div class="destination-info">
+                  <h3>Pokhara </h3>
+                  <p>Mustang, a district in the northwestern part of Nepal, 
+                    is a captivating destination renowned for its unique blend of natural beauty,
+                     cultural richness, and historical significance. 
+                     Situated in the rain shadow of the Himalayas, Mustang boasts a 
+                     distinct landscape characterized by barren hills, deep gorges, 
+                     and rugged terrain, offering a stark contrast to the lush greenery
+                      found in other regions of Nepal.</p>
+                  
+              </div>
+          </div>
+
+          <div class="destination-card">
+            <img src="../static/images/mteverest.jpg" alt="Destination Image">
+            <div class="destination-info">
+                <h3>Mt Everest </h3>
+                <p>Mustang, a district in the northwestern part of Nepal, 
+                  is a captivating destination renowned for its unique blend of natural beauty,
+                   cultural richness, and historical significance. 
+                   Situated in the rain shadow of the Himalayas, Mustang boasts a 
+                   distinct landscape characterized by barren hills, deep gorges, 
+                   and rugged terrain, offering a stark contrast to the lush greenery
+                    found in other regions of Nepal.</p>
+                
+            </div>
+        </div>
+
+        <div class="destination-card">
+          <img src="../static/images/illam.jpg" alt="Destination Image">
+          <div class="destination-info">
+              <h3>Illam</h3>
+              <p>
+                Illam, a picturesque district nestled in the eastern hills 
+                of Nepal, captivates visitors with its lush tea gardens, 
+                rolling green hills, and serene ambiance. Renowned as the 
+                "Tea Garden of Nepal," Illam boasts sprawling plantations 
+                that carpet the landscape, offering a mesmerizing sight and
+                 a source of livelihood for local communities. The region's
+                  temperate climate and fertile soil create optimal conditions 
+                  for tea cultivation, resulting in some of Nepal's finest tea varieties</p>
+              
+          </div>
+        </div>
+        </div>
+    </div>  
+  <!--Destination Code Ends Here-->
+
+  <!--Code of Cost Calculation-->  
+ 
+ <div id="CostCalculation">
+      <div class="container">
+        <h1>Cost Calculation</h1>
+        <form class="cost-form">
+          <div class="First">
+            <input type="number" placeholder="Enter your budget for travel" style="margin-right: 20px;">
+            <input type="number" placeholder="Enter number of people" >
+          </div>
+          <div class="Second">
+            <label style="margin-right:250px;">Place</label>
+            <label>Date</label>
+          </div>
+          <div class="Third">
+            <label style="margin-right:250px;">From</label>
+            <label>From</label>
+          </div>
+          <div class="Fourth">
+            <select name="Place" id="Place" style="width: 150px; margin-right: 140px;">
+              <option >Location</option>
+              <option value="mustang">mustang</option>
+              <option value="manang">manang</option>
+              <option value="pokhara">pokhara</option>
+              <option value="kathmandu">kathmandu</option>
+            </select>
+            <!-- <label for="startDate">Start Date:</label> -->
+            <input type="date" id="startDate" required>
+
+          <div class="Fifth">
+            <label style="margin-right:275px;">To</label>
+            <label>To</label>
+          </div>
+          <div class="Sixth">  
+            <select name="Place" id="Place" style="width: 150px; margin-left:-10px; margin-right: 140px;">
+              <option >Location</option>
+              <option value="mustang">mustang</option>
+              <option value="manang">manang</option>
+              <option value="pokhara">pokhara</option>
+              <option value="kathmandu">kathmandu</option>
+            </select>
+            <!-- <label for="endDate">End Date:</label> -->
+            <input type="date" id="endDate" required>          
+      
+          <div class="Eighth">
+            <button>
+              Calculate
+            </button>
+          </div>
+        </form>
+      </div>  
+    </div>   
+  <!--Cost Calulation code ends-->
+
+    
+  <script src="../static/js/homepage.js"></script>
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+</body>
+</html>
+
+
+
+
+      <!-- <select name="year" id="year" style="width:80px"> 
+              <option value="year">Year</option>
+              <option value="year">2023</option>
+              <option value="year">2024</option>
+              <option value="year">2025</option>
+            </select>  
+            <select name="month" id="month" style="width: 80px;">
+              <option value="month">Month</option>
+              <option value="month">Jan</option>
+              <option value="month">Feb</option>
+              <option value="month">Mar</option>
+              <option value="month">Apr</option>
+              <option value="month">May</option>
+              <option value="month">Jun</option>
+              <option value="month">Jul</option>
+              <option value="month">Aug</option>
+              <option value="month">sep</option>
+              <option value="month">Oct</option>
+              <option value="month">Nov</option>
+              <option value="month">Dec</option>
+            </select>  
+            <select name="day" id="day" style="width: 60px;">
+              <option value="day">Day</option>
+              <option value="day">1</option>
+              <option value="day">2</option>
+              <option value="day">3</option>
+              <option value="day">4</option>
+              <option value="day">5</option>
+              <option value="day">6</option>
+              <option value="day">7</option>
+              <option value="day">8</option>
+              <option value="day">9</option>
+              <option value="day">10</option>
+              <option value="day">11</option>
+              <option value="day">12</option>
+              <option value="day">13</option>
+              <option value="day">14</option>
+              <option value="day">15</option>
+              <option value="day">16</option>
+              <option value="day">17</option>
+              <option value="day">18</option>
+              <option value="day">19</option>
+              <option value="day">20</option>
+              <option value="day">21</option>
+              <option value="day">22</option>
+              <option value="day">23</option>
+              <option value="day">24</option>
+              <option value="day">25</option>
+              <option value="day">26</option>
+              <option value="day">27</option>
+              <option value="day">28</option>
+              <option value="day">29</option>
+              <option value="day">30</option>
+              <option value="day">31</option>
+              <option value="day">32</option>
+            </select>  
+          </div>
+          <div class="Seventh">
+            <select name="transport" id="transport" onchange="populateSecondSelect()" style="width: 250px; margin-right: 20px;">
+              <option value="transport">Choose your travel transport</option>
+              <option value="transport">Bus</option>
+              <option value="transport">Airplane</option>
+            </select>  
+            <select name="comapany" id="comapany" style="width: 250px;">
+              <option value="comapany">Choose transport comapany</option>
+              <option value="comapany">buddha</option>
+              <option value="comapany">yeti</option>
+              <option value="comapany">2025</option>
+            </select>  
+          </div>
+          <br> -->
